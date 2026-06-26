@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  PHENIX SYSTEMS — One-page bilingual (EN / AR) website                        ║
+║  ───────────────────────────────────────────────────────────────────────────║
+║  HOW TO EDIT THIS SITE (everything lives in this single file):               ║
+║                                                                              ║
+║  1) COLORS & FONTS  ......  see  :root { ... }  in the <style> block.         ║
+║  2) PHONE / WHATSAPP / EMAIL / MAP / SOCIAL  ..  see  const CONFIG = {...}    ║
+║                            near the bottom <script>. Change once, applied     ║
+║                            everywhere automatically.                          ║
+║  3) ENGLISH TEXT  .......  written directly in the HTML below (good for SEO). ║
+║                            Just edit the words inside the tags.               ║
+║  4) ARABIC TEXT  ........  lives in one place: const I18N = { ar: {...} }.    ║
+║                            Each line is matched to the English by a key.      ║
+║  5) IMAGES / LOGOS  .....  search for  src="  — swap the URL for your own.    ║
+║  6) PRODUCTS  ...........  each product is a <article class="prod-card">.     ║
+║                            Copy one to add a product; delete one to remove.   ║
+║                                                                              ║
+║  LANGUAGE: English shows by default. Arabic loads automatically for Arabic    ║
+║  browsers, or via the toggle, or by opening  ?lang=ar  (or /ar on your host). ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+-->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ════════════ SEO: TITLE + META (edit freely) ════════════ -->
+<title>Phenix Systems | Best POS &amp; Accounting Software in UAE</title>
+<meta name="description" content="Phenix Systems — the best POS and integrated accounting software in the UAE for retail, restaurants, manufacturing, inventory, HR and fixed assets. UAE FTA tax & e-invoicing ready. Cloud-based, mobile, trusted by 15,000+ businesses.">
+<meta name="keywords" content="POS system, point of sale software, POS software, retail POS, restaurant POS, accounting software, ERP software, inventory management software, cloud accounting, e-invoicing, ZATCA, VAT accounting, manufacturing ERP, HR payroll software, fixed assets software, نظام نقاط البيع, برنامج نقاط البيع, افضل برنامج محاسبة, برنامج محاسبة الشركات, نظام محاسبي متكامل, برنامج المخازن, برنامج المطاعم, الفاتورة الإلكترونية">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Phenix Systems">
+<meta name="theme-color" content="#9E1619">
+<link rel="canonical" href="https://www.phenixsystems.com/">
+<link rel="alternate" hreflang="en" href="https://www.phenixsystems.com/">
+<link rel="alternate" hreflang="ar" href="https://www.phenixsystems.com/ar">
+<link rel="alternate" hreflang="x-default" href="https://www.phenixsystems.com/">
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Phenix Systems">
+<meta property="og:title" content="Phenix Systems | Best POS & Accounting Software for Business">
+<meta property="og:description" content="The best POS and integrated accounting software — retail, restaurants, manufacturing, inventory, HR & cloud. Tax & e-invoicing ready. Trusted by 15,000+ businesses.">
+<meta property="og:url" content="https://www.phenixsystems.com/">
+<meta property="og:image" content="https://www.phenixsystems.com/images/og_image.webp">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phenix Systems | Best POS & Accounting Software">
+<meta name="twitter:description" content="The best POS and accounting software for every business. Tax-ready, cloud-based, mobile.">
+<meta name="twitter:image" content="https://www.phenixsystems.com/images/og_image.webp">
+
+<link rel="icon" href="https://www.phenixsystems.com/images/logo-1.webp">
+<link rel="apple-touch-icon" href="https://www.phenixsystems.com/images/logo-1.webp">
+
+<!-- Fonts: Plus Jakarta Sans (Latin) + Cairo (Arabic) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- ════════════ SEO: STRUCTURED DATA (JSON-LD) ════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.phenixsystems.com/#org",
+      "name": "Phenix Systems",
+      "url": "https://www.phenixsystems.com/",
+      "logo": "https://www.phenixsystems.com/images/logo-1.webp",
+      "email": "accountant@phenixsystems.com",
+      "telephone": "+971509585853",
+      "slogan": "The best accounting software for business",
+      "sameAs": ["https://www.facebook.com/"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Phenix Systems",
+      "operatingSystem": "Windows, Web, Android, iOS",
+      "applicationCategory": "BusinessApplication",
+      "offers": { "@type": "Offer", "priceCurrency": "USD", "price": "0" },
+      "description": "Integrated POS and accounting software for retail, restaurants, manufacturing, inventory, HR, fixed assets and cloud. Tax and e-invoicing ready.",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "1500" }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Phenix Products",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Point of Sale (POS)","url":"https://phenixsystems.com/services/products/pos"},
+        {"@type":"ListItem","position":2,"name":"Restaurants","url":"https://phenixsystems.com/services/products/restaurants"},
+        {"@type":"ListItem","position":3,"name":"Manufacturing","url":"https://phenixsystems.com/services/products/manufacturing"},
+        {"@type":"ListItem","position":4,"name":"Inventory","url":"https://phenixsystems.com/services/products/Inventory"},
+        {"@type":"ListItem","position":5,"name":"Accounting","url":"https://phenixsystems.com/services/products/accounting"},
+        {"@type":"ListItem","position":6,"name":"Fixed Assets","url":"https://phenixsystems.com/services/products/fixedassets"},
+        {"@type":"ListItem","position":7,"name":"HR Solutions","url":"https://phenixsystems.com/services/products/hr-solutions"},
+        {"@type":"ListItem","position":8,"name":"Phenix Cloud","url":"https://phenixsystems.com/services/supportive-solutions/phenix-cloud"}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  1) BRAND COLORS & FONTS — change these to re-skin the site   ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+:root{
+  /* —— Phenix brand palette (red + white) —— */
+  --navy:#6E0F12;          /* darkest red (maroon) — header/hero/footer  */
+  --navy-2:#9E1619;        /* deep red gradient partner                  */
+  --brand:#D81F26;         /* primary brand red                          */
+  --brand-2:#F0454B;       /* brighter red (gradients, hovers)           */
+  --accent:#E11B22;        /* CTA red & highlights                       */
+  --accent-2:#FF6A70;      /* light red                                  */
+  --accent-soft:rgba(216,31,38,.10);
+
+  /* —— Neutrals —— */
+  --bg:#FFF7F6;            /* page background (warm white)               */
+  --surface:#FFFFFF;       /* cards                                      */
+  --ink:#1C1A1B;           /* main text                                  */
+  --muted:#6B6670;         /* secondary text                            */
+  --line:#F1E2E2;          /* hairlines / borders                       */
+  --white:#FFFFFF;
+
+  /* —— Shape, depth, motion —— */
+  --r:14px; --r-lg:22px; --r-xl:30px;
+  --sh-sm:0 4px 14px rgba(60,15,18,.07);
+  --sh-md:0 14px 38px rgba(60,15,18,.12);
+  --sh-lg:0 30px 70px rgba(70,10,14,.20);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --container:1200px;
+
+  /* —— Fonts (EN default, AR swapped on RTL) —— */
+  --ff-en:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --ff-ar:'Cairo',system-ui,Tahoma,sans-serif;
+  --ff:var(--ff-en);
+}
+html[dir="rtl"]{ --ff:var(--ff-ar); }
+
+/* ── Reset & base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--ff);
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+h1,h2,h3,h4{line-height:1.18;font-weight:800;letter-spacing:-.02em}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3{letter-spacing:0}
+section{position:relative}
+.container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:20px}
+
+/* Accessibility helpers */
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;z-index:200}
+.skip:focus{left:12px;top:12px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* Reveal-on-scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.98rem;
+  padding:14px 26px;border-radius:999px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;
+  white-space:nowrap}
+.btn svg{width:19px;height:19px}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;box-shadow:0 10px 26px rgba(225,27,34,.4)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(225,27,34,.5)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-3px)}
+.btn-dark{background:var(--brand);color:#fff;box-shadow:0 10px 26px rgba(216,31,38,.3)}
+.btn-dark:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(216,31,38,.4)}
+
+/* Section heading kit */
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.8rem;
+  text-transform:uppercase;letter-spacing:.12em;color:var(--brand);
+  background:var(--accent-soft);padding:7px 15px;border-radius:999px}
+html[dir="rtl"] .eyebrow{letter-spacing:0}
+.sec-title{font-size:clamp(1.7rem,4.4vw,2.7rem);margin:18px 0 14px}
+.sec-sub{color:var(--muted);font-size:1.06rem;max-width:620px}
+.sec-head{text-align:center;display:flex;flex-direction:column;align-items:center;margin-bottom:46px}
+.sec-head .sec-sub{margin-inline:auto}
+.text-accent{color:var(--accent)}
+
+/* ╔══════════════════ TOP UTILITY BAR ══════════════════╗ */
+.topbar{background:var(--navy);color:#F4DEDE;font-size:.84rem}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:14px;height:40px}
+.topbar a{display:inline-flex;align-items:center;gap:7px;transition:color .2s}
+.topbar a:hover{color:#fff}
+.topbar svg{width:15px;height:15px;color:var(--accent)}
+.topbar .tb-left{display:flex;gap:18px}
+.topbar .tb-phone span{direction:ltr;unicode-bidi:embed}
+@media(max-width:640px){.topbar .tb-left a:nth-child(2){display:none}}
+
+/* ╔══════════════════ NAV ══════════════════╗ */
+.nav{position:sticky;top:0;z-index:100;background:rgba(110,15,18,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);transition:padding .3s,background .3s}
+.nav.shrink{background:rgba(110,15,18,.98);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+.nav .container{display:flex;align-items:center;gap:18px;height:74px;transition:height .3s}
+.nav.shrink .container{height:62px}
+.brand{display:flex;align-items:center;gap:11px;margin-inline-end:auto}
+.brand img{height:46px;width:auto}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{color:#F7E6E6;font-weight:600;font-size:.96rem;padding:9px 14px;border-radius:10px;
+  position:relative;transition:color .2s,background .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.lang-btn{display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:700;font-size:.9rem;
+  border:1.5px solid rgba(255,255,255,.3);padding:8px 14px;border-radius:999px;transition:background .2s,border-color .2s}
+.lang-btn:hover{background:rgba(255,255,255,.14);border-color:var(--accent)}
+.lang-btn svg{width:17px;height:17px;color:var(--accent-2)}
+.nav .btn{padding:11px 20px;font-size:.92rem}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;border-radius:10px}
+.hamburger span{width:24px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+
+/* Mobile menu */
+.menu-overlay{position:fixed;inset:0;background:rgba(40,8,10,.55);backdrop-filter:blur(3px);
+  opacity:0;visibility:hidden;transition:.3s;z-index:110}
+.menu-overlay.open{opacity:1;visibility:visible}
+.mobile-menu{position:fixed;top:0;inset-inline-end:0;height:100dvh;width:min(82vw,330px);
+  background:var(--navy);z-index:120;padding:26px 22px;display:flex;flex-direction:column;gap:6px;
+  transform:translateX(100%);transition:transform .35s var(--ease);overflow-y:auto}
+html[dir="rtl"] .mobile-menu{inset-inline-end:0;transform:translateX(-100%)}
+.mobile-menu.open{transform:translateX(0)!important}
+.mobile-menu .mm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.mobile-menu .mm-head img{height:40px}
+.mm-close{color:#fff;font-size:1.8rem;line-height:1;padding:4px 10px}
+.mobile-menu a{color:#F7E6E6;font-weight:600;font-size:1.05rem;padding:13px 12px;border-radius:10px;
+  border-bottom:1px solid rgba(255,255,255,.07)}
+.mobile-menu a:hover{background:rgba(255,255,255,.08);color:#fff}
+.mobile-menu .btn{margin-top:14px;justify-content:center}
+
+@media(max-width:940px){
+  .nav-links{display:none}
+  .nav .btn-primary{display:none}
+  .hamburger{display:flex}
+}
+
+/* ╔══════════════════ HERO ══════════════════╗ */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 55%,var(--brand) 130%);
+  color:#fff;position:relative;overflow:hidden;padding:54px 0 70px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:0}
+.hero::before{width:480px;height:480px;background:radial-gradient(circle,var(--accent),transparent 65%);
+  top:-160px;inset-inline-end:-120px;animation:float1 14s ease-in-out infinite}
+.hero::after{width:420px;height:420px;background:radial-gradient(circle,var(--brand-2),transparent 60%);
+  bottom:-150px;inset-inline-start:-120px;animation:float2 17s ease-in-out infinite}
+@keyframes float1{50%{transform:translate(-30px,40px) scale(1.1)}}
+@keyframes float2{50%{transform:translate(40px,-30px) scale(1.08)}}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:999px;font-size:.86rem;font-weight:600;margin-bottom:22px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#33d98a;box-shadow:0 0 0 4px rgba(51,217,138,.25);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(51,217,138,0)}}
+.hero h1{font-size:clamp(2.1rem,5.6vw,3.7rem);margin-bottom:18px}
+.hero h1 .grad{background:linear-gradient(120deg,var(--accent-2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:clamp(1.02rem,2.4vw,1.22rem);color:#F4DDDD;max-width:540px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.hero-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:#E8CCCD;font-size:.86rem}
+.hero-trust .stars{color:var(--accent-2);letter-spacing:2px}
+.hero-trust b{color:#fff}
+
+/* Hero visual: animated dashboard mockup */
+.hero-visual{position:relative;perspective:1400px}
+.dash{background:rgba(255,255,255,.97);border-radius:var(--r-lg);box-shadow:var(--sh-lg);padding:18px;
+  transform:rotateY(-8deg) rotateX(3deg);animation:dashIn 1s var(--ease) both .2s;color:var(--ink)}
+@keyframes dashIn{from{opacity:0;transform:rotateY(-22deg) rotateX(8deg) translateY(30px)}}
+.dash-top{display:flex;align-items:center;gap:7px;margin-bottom:14px}
+.dash-top i{width:11px;height:11px;border-radius:50%;background:#e0e6ef;display:block}
+.dash-top i:nth-child(1){background:#ff6058}.dash-top i:nth-child(2){background:#ffbd2e}.dash-top i:nth-child(3){background:#28c93f}
+.dash-top span{margin-inline-start:auto;font-size:.72rem;color:var(--muted);font-weight:600}
+.dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.kpi{background:var(--bg);border-radius:12px;padding:11px 12px}
+.kpi small{font-size:.66rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.kpi b{display:block;font-size:1.15rem;margin-top:3px}
+.kpi.up b{color:#15a05a}
+.dash-chart{height:96px;background:linear-gradient(180deg,rgba(216,31,38,.06),transparent);border-radius:12px;
+  display:flex;align-items:flex-end;gap:7px;padding:12px}
+.dash-chart span{flex:1;background:linear-gradient(180deg,var(--brand-2),var(--brand));border-radius:5px 5px 0 0;
+  animation:bar 1.4s var(--ease) both}
+.dash-chart span:nth-child(odd){background:linear-gradient(180deg,var(--accent-2),var(--accent))}
+@keyframes bar{from{height:0!important}}
+.dash-row{display:flex;align-items:center;gap:10px;margin-top:12px;padding:10px 12px;background:var(--bg);border-radius:12px}
+.dash-row .ico{width:34px;height:34px;border-radius:9px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;flex:none}
+.dash-row .ico svg{width:18px;height:18px}
+.dash-row .t{font-weight:700;font-size:.86rem}
+.dash-row .s{font-size:.72rem;color:var(--muted)}
+.dash-row .amt{margin-inline-start:auto;font-weight:800;color:var(--brand)}
+.float-chip{position:absolute;background:#fff;border-radius:14px;box-shadow:var(--sh-md);padding:11px 15px;
+  display:flex;align-items:center;gap:10px;color:var(--ink);font-weight:700;font-size:.84rem}
+.float-chip svg{width:20px;height:20px}
+.fc-1{top:-22px;inset-inline-start:-18px;animation:bob 4s ease-in-out infinite}
+.fc-2{bottom:18px;inset-inline-end:-22px;animation:bob 4.6s ease-in-out infinite .6s}
+.fc-1 svg{color:#15a05a}.fc-2 svg{color:var(--accent)}
+@keyframes bob{50%{transform:translateY(-12px)}}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-visual{max-width:440px;margin-inline:auto;width:100%}
+  .dash{transform:none}
+}
+
+/* ╔══════════════════ TAX / TRUST STRIP ══════════════════╗ */
+.trust{background:var(--surface);border-bottom:1px solid var(--line);padding:30px 0}
+.trust-inner{display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap}
+.trust-lead{font-weight:700;color:var(--ink);font-size:.96rem;max-width:230px}
+.trust-lead .text-accent{display:block;font-size:.78rem;color:var(--muted);font-weight:600;margin-top:2px}
+.trust-logos{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.trust-logos figure{display:flex;flex-direction:column;align-items:center;gap:6px;filter:grayscale(.2)}
+.trust-logos img{height:46px;width:auto;object-fit:contain}
+.trust-logos figcaption{font-size:.7rem;color:var(--muted);font-weight:600;max-width:110px;text-align:center}
+
+/* ╔══════════════════ VALUE PROPS ══════════════════╗ */
+.values{padding:74px 0}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.value{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 24px;
+  transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.value:hover{transform:translateY(-8px);box-shadow:var(--sh-md);border-color:transparent}
+.value .vic{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 10px 24px rgba(216,31,38,.28)}
+.value:nth-child(even) .vic{background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 10px 24px rgba(225,27,34,.3)}
+.value .vic svg{width:30px;height:30px}
+.value h3{font-size:1.16rem;margin-bottom:8px}
+.value p{color:var(--muted);font-size:.95rem}
+
+/* ╔══════════════════ PRODUCTS ══════════════════╗ */
+.products{padding:74px 0;background:linear-gradient(180deg,#FDECEC,var(--bg))}
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod-card{grid-column:span 1;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px 24px;display:flex;flex-direction:column;position:relative;overflow:hidden;
+  transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.prod-card::before{content:"";position:absolute;inset-inline-start:0;top:0;height:4px;width:100%;
+  background:linear-gradient(90deg,var(--accent),var(--brand-2));transform:scaleX(0);transform-origin:inline-start;
+  transition:transform .4s var(--ease)}
+.prod-card:hover{transform:translateY(-8px);box-shadow:var(--sh-lg);border-color:transparent}
+.prod-card:hover::before{transform:scaleX(1)}
+/* flagship (POS) spans two columns on desktop */
+.prod-card.feature{grid-column:span 2;background:linear-gradient(150deg,var(--navy),var(--brand));color:#fff;border:none}
+.prod-card.feature .p-desc,.prod-card.feature .p-feats li{color:#F4DEDE}
+.prod-card.feature .p-icon{background:rgba(255,255,255,.14);color:#fff}
+.prod-card.feature .p-feats svg{color:var(--accent-2)}
+.prod-card.feature .learn{color:var(--accent-2)}
+.prod-card.feature .p-tag{background:var(--accent);color:#fff}
+.p-icon{width:56px;height:56px;border-radius:15px;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;margin-bottom:16px;flex:none}
+.p-icon svg{width:30px;height:30px}
+.p-tag{position:absolute;top:18px;inset-inline-end:18px;font-size:.68rem;font-weight:800;text-transform:uppercase;
+  letter-spacing:.06em;background:var(--accent-soft);color:var(--accent);padding:5px 11px;border-radius:999px}
+.prod-card h3{font-size:1.28rem;margin-bottom:9px}
+.p-desc{color:var(--muted);font-size:.94rem;margin-bottom:16px}
+.p-feats{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.prod-card.feature .p-feats{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
+.p-feats li{display:flex;align-items:flex-start;gap:9px;font-size:.9rem;font-weight:500}
+.p-feats svg{width:18px;height:18px;color:var(--brand-2);flex:none;margin-top:2px}
+.learn{margin-top:auto;display:inline-flex;align-items:center;gap:7px;font-weight:700;color:var(--brand);font-size:.92rem;
+  transition:gap .25s}
+.learn:hover{gap:12px}
+.learn svg{width:17px;height:17px;transition:transform .25s}
+html[dir="rtl"] .learn svg{transform:scaleX(-1)}
+
+@media(max-width:1080px){
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-card.feature{grid-column:span 2}
+}
+@media(max-width:600px){
+  .values-grid{grid-template-columns:1fr}
+  .prod-grid{grid-template-columns:1fr}
+  .prod-card.feature{grid-column:span 1}
+  .prod-card.feature .p-feats{grid-template-columns:1fr}
+}
+
+/* ╔══════════════════ STATS ══════════════════╗ */
+.stats{padding:80px 0;background:linear-gradient(150deg,var(--navy),var(--navy-2));color:#fff;overflow:hidden;position:relative}
+.stats::after{content:"";position:absolute;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(225,27,34,.18),transparent 65%);top:-200px;inset-inline-end:-150px}
+.stats .sec-head h2{color:#fff}
+.stats .sec-head .sec-sub{color:#F0D6D6}
+.stats-hero{text-align:center;margin-bottom:46px;position:relative;z-index:2}
+.stats-hero .big{font-size:clamp(3rem,9vw,5.4rem);font-weight:800;line-height:1;
+  background:linear-gradient(120deg,var(--accent-2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stats-hero .cap{font-size:1.1rem;color:#F4DEDE;color:#F4DEDE;font-weight:600;margin-top:6px}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;position:relative;z-index:2}
+.stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);
+  padding:24px 14px;text-align:center;transition:transform .3s var(--ease),background .3s}
+.stat:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+.stat .num{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:800;color:var(--accent-2)}
+.stat .lbl{font-size:.82rem;color:#F0D6D6;margin-top:5px;font-weight:600}
+@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ╔══════════════════ INTEGRATIONS / CONNECT ══════════════════╗ */
+.connect{padding:74px 0}
+.connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.connect h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:14px}
+.connect p{color:var(--muted);margin-bottom:24px;font-size:1.05rem}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);
+  border-radius:999px;padding:10px 18px;font-weight:600;font-size:.92rem;box-shadow:var(--sh-sm);
+  transition:transform .25s,box-shadow .25s,border-color .25s}
+.chip:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:var(--accent)}
+.chip svg{width:18px;height:18px;color:var(--brand)}
+.apps-card{background:linear-gradient(150deg,var(--brand),var(--brand-2));border-radius:var(--r-xl);
+  padding:36px;color:#fff;box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.apps-card::before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.16),transparent 65%);top:-120px;inset-inline-end:-90px}
+.apps-card h3{font-size:1.4rem;margin-bottom:8px}
+.apps-card>p{color:rgba(255,255,255,.85);margin-bottom:22px}
+.apps-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:2}
+.app-item{display:flex;align-items:center;gap:11px;background:rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;font-weight:600;font-size:.9rem}
+.app-item svg{width:20px;height:20px;color:var(--accent-2);flex:none}
+@media(max-width:880px){.connect-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ╔══════════════════ WHY / ABOUT ══════════════════╗ */
+.why{padding:74px 0;background:linear-gradient(180deg,var(--bg),#FCE9E9)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.why-points{display:flex;flex-direction:column;gap:18px;margin-top:22px}
+.why-point{display:flex;gap:15px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh-sm);transition:transform .25s}
+.why-point:hover{transform:translateX(6px)}
+html[dir="rtl"] .why-point:hover{transform:translateX(-6px)}
+.why-point .pic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:#fff;display:grid;place-items:center;flex:none}
+.why-point .pic svg{width:24px;height:24px}
+.why-point h4{font-size:1.05rem;margin-bottom:3px}
+.why-point p{color:var(--muted);font-size:.92rem}
+.why-visual{background:linear-gradient(150deg,var(--navy),var(--brand));border-radius:var(--r-xl);padding:42px 36px;color:#fff;
+  box-shadow:var(--sh-lg);position:relative;overflow:hidden}
+.why-visual .qt{font-size:1.3rem;font-weight:700;line-height:1.5;margin-bottom:24px}
+.why-visual .qmark{font-size:3.6rem;line-height:.5;color:var(--accent);opacity:.7}
+.why-visual .author{display:flex;align-items:center;gap:13px}
+.why-visual .author img{width:48px;height:48px;border-radius:50%;border:2px solid var(--accent);background:#fff;padding:5px;object-fit:contain}
+.why-visual .author b{display:block}
+.why-visual .author span{font-size:.85rem;color:#F0D6D6}
+@media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:36px}}
+
+/* ╔══════════════════ FAQ ══════════════════╗ */
+.faq{padding:74px 0}
+.faq-list{max-width:780px;margin-inline:auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:box-shadow .25s}
+.faq-item.open{box-shadow:var(--sh-md)}
+.faq-q{width:100%;display:flex;align-items:center;gap:14px;padding:20px 22px;text-align:start;font-weight:700;font-size:1.05rem;color:var(--ink)}
+.faq-q .qx{margin-inline-start:auto;width:26px;height:26px;border-radius:50%;background:var(--accent-soft);color:var(--accent);
+  display:grid;place-items:center;flex:none;transition:transform .3s;font-size:1.2rem;line-height:1}
+.faq-item.open .qx{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+.faq-a p{padding:0 22px 20px;color:var(--muted)}
+
+/* ╔══════════════════ CONTACT ══════════════════╗ */
+.contact{padding:74px 0;background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff}
+.contact .sec-head h2{color:#fff}.contact .sec-head .sec-sub{color:#F0D6D6}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-xl);padding:32px}
+.contact-card h3{font-size:1.3rem;margin-bottom:6px}
+.contact-card>p{color:#F0D6D6;margin-bottom:22px;font-size:.96rem}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px;color:#F4DEDE}
+.field input,.field textarea{width:100%;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.16);
+  border-radius:12px;padding:13px 15px;color:#fff;font-family:inherit;font-size:.96rem;transition:border-color .2s,background .2s}
+.field input::placeholder,.field textarea::placeholder{color:#D9BEC0}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.12)}
+.field textarea{resize:vertical;min-height:104px}
+.contact-form .btn{width:100%;justify-content:center;margin-top:4px}
+.info-list{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+.info-item{display:flex;gap:14px;align-items:center}
+.info-item .ic{width:46px;height:46px;border-radius:13px;background:rgba(225,27,34,.16);color:var(--accent-2);
+  display:grid;place-items:center;flex:none}
+.info-item .ic svg{width:22px;height:22px}
+.info-item .l{font-size:.78rem;color:#E6CBCC;font-weight:600}
+.info-item a,.info-item .v{font-size:1.04rem;font-weight:700;color:#fff;display:block}
+.info-item .ltr{direction:ltr;unicode-bidi:embed}
+.map-wrap{display:block;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,.14);height:230px}
+.map-wrap iframe{width:100%;height:100%;border:0;filter:grayscale(.2) contrast(1.05)}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+
+/* ╔══════════════════ FOOTER ══════════════════╗ */
+.footer{background:#560C0F;color:#E6CBCC;padding:56px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:36px}
+.foot-brand img{height:50px;margin-bottom:16px}
+.foot-brand p{font-size:.94rem;max-width:300px;margin-bottom:18px}
+.foot-social{display:flex;gap:10px}
+.foot-social a{width:40px;height:40px;border-radius:11px;background:rgba(255,255,255,.08);display:grid;place-items:center;
+  color:#F4DEDE;transition:background .25s,transform .25s,color .25s}
+.foot-social a:hover{background:var(--accent);color:#fff;transform:translateY(-3px)}
+.foot-social svg{width:19px;height:19px}
+.foot-col h4{color:#fff;font-size:1rem;margin-bottom:16px}
+.foot-col a{display:block;padding:6px 0;font-size:.92rem;transition:color .2s,padding-inline-start .2s}
+.foot-col a:hover{color:var(--accent-2);padding-inline-start:5px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;
+  gap:14px;flex-wrap:wrap;font-size:.86rem}
+.foot-bottom .ltr{direction:ltr;unicode-bidi:embed}
+@media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;gap:28px}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+
+/* ══════════════════ CLIENTS MARQUEE ══════════════════ */
+.clients{padding:54px 0;background:var(--surface);border-block:1px solid var(--line);overflow:hidden}
+.clients h3{text-align:center;color:var(--muted);font-size:.96rem;font-weight:700;margin-bottom:28px}
+.marquee-wrap{position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee{display:flex;gap:56px;width:max-content;align-items:center;animation:marq 28s linear infinite}
+.marquee img{height:50px;width:auto;object-fit:contain;opacity:.72;filter:grayscale(.35);transition:opacity .3s,filter .3s}
+.marquee img:hover{opacity:1;filter:none}
+.clients:hover .marquee{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+html[dir="rtl"] .marquee{animation-direction:reverse}
+
+/* ╔══════════════════ WHATSAPP FLOAT + BACK TO TOP ══════════════════╗ */
+.wa-float{position:fixed;inset-inline-end:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:0}
+.wa-btn{width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .3s;animation:waPulse 2.6s infinite}
+.wa-btn svg{width:32px;height:32px;color:#fff}
+.wa-float:hover .wa-btn{transform:scale(1.08)}
+@keyframes waPulse{0%,100%{box-shadow:0 12px 30px rgba(37,211,102,.45)}50%{box-shadow:0 12px 30px rgba(37,211,102,.45),0 0 0 14px rgba(37,211,102,0)}}
+.wa-tip{position:absolute;inset-inline-end:72px;bottom:14px;background:#fff;color:var(--ink);border-radius:12px;
+  padding:9px 15px;box-shadow:var(--sh-md);font-weight:700;font-size:.86rem;white-space:nowrap;
+  opacity:0;transform:translateX(10px);pointer-events:none;transition:.3s}
+html[dir="rtl"] .wa-tip{transform:translateX(-10px)}
+.wa-float:hover .wa-tip{opacity:1;transform:translateX(0)}
+.wa-tip small{display:block;color:var(--muted);font-weight:600;direction:ltr}
+.to-top{position:fixed;inset-inline-end:26px;bottom:92px;z-index:89;width:46px;height:46px;border-radius:50%;
+  background:var(--brand);color:#fff;display:grid;place-items:center;box-shadow:var(--sh-md);
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+.to-top svg{width:22px;height:22px}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- ═══════════════════════ TOP UTILITY BAR ═══════════════════════ -->
+<div class="topbar">
+  <div class="container">
+    <div class="tb-left">
+      <a href="tel:+971509585853" class="tb-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z"/></svg>
+        <span>+971 50 958 5853</span></a>
+      <a href="mailto:accountant@phenixsystems.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        accountant@phenixsystems.com</a>
+    </div>
+    <div class="tb-right">
+      <a href="https://www.phenixsystems.com/login" data-i18n="login">Client Login</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ NAV ═══════════════════════ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#hero" class="brand" aria-label="Phenix Systems home">
+      <img src="https://www.phenixsystems.com/images/logo-white.webp" alt="Phenix Systems logo">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#products" data-i18n="nav_products">Products</a>
+      <a href="#why" data-i18n="nav_why">Why Phenix</a>
+      <a href="#stats" data-i18n="nav_sectors">Sectors</a>
+      <a href="#connect" data-i18n="nav_integrations">Integrations</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" aria-label="Switch language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg>
+        <span id="langLabel">العربية</span>
+      </button>
+      <a href="#contact" class="btn btn-primary" data-i18n="nav_demo">Request a Quotation</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<aside class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+  <div class="mm-head">
+    <img src="https://www.phenixsystems.com/images/logo-white.webp" alt="Phenix Systems">
+    <button class="mm-close" id="mmClose" aria-label="Close menu">&times;</button>
+  </div>
+  <a href="#products" data-i18n="nav_products">Products</a>
+  <a href="#why" data-i18n="nav_why">Why Phenix</a>
+  <a href="#stats" data-i18n="nav_sectors">Sectors</a>
+  <a href="#connect" data-i18n="nav_integrations">Integrations</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  <a href="#contact" class="btn btn-primary" data-i18n="nav_demo">Request a Quotation</a>
+</aside>
+
+<main id="main">
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="hero" id="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="hero-badge reveal"><span class="dot"></span><span data-i18n="hero_badge">Trusted by 15,000+ businesses</span></span>
+      <h1 class="reveal d1" data-i18n-html="hero_h1">The best <span class="grad">POS &amp; accounting</span> software for your business</h1>
+      <p class="lead reveal d2" data-i18n="hero_lead">One powerful, integrated system for point of sale, accounting, inventory, restaurants, manufacturing and HR — tax-ready, cloud-based, and built to grow with you.</p>
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-primary" id="heroWa" href="#" target="_blank" rel="noopener" data-i18n="hero_cta1">Get a Free Demo</a>
+        <a class="btn btn-ghost" href="#products" data-i18n="hero_cta2">Explore Products</a>
+      </div>
+      <div class="hero-trust reveal d4">
+        <span class="stars">★★★★★</span>
+        <span data-i18n-html="hero_rating"><b>4.8/5</b> average rating</span>
+        <span data-i18n-html="hero_tax"><b>Tax &amp; e-invoicing</b> ready</span>
+      </div>
+    </div>
+
+    <!-- Animated dashboard mockup -->
+    <div class="hero-visual reveal d2" aria-hidden="true">
+      <div class="dash">
+        <div class="dash-top"><i></i><i></i><i></i><span>Phenix · POS</span></div>
+        <div class="dash-kpis">
+          <div class="kpi"><small data-i18n="k_today">Today</small><b>AED 12,480</b></div>
+          <div class="kpi up"><small data-i18n="k_orders">Orders</small><b>342 ▲</b></div>
+          <div class="kpi"><small data-i18n="k_stock">Stock</small><b>1,920</b></div>
+        </div>
+        <div class="dash-chart">
+          <span style="height:46%"></span><span style="height:66%"></span><span style="height:38%"></span>
+          <span style="height:82%"></span><span style="height:58%"></span><span style="height:92%"></span><span style="height:70%"></span>
+        </div>
+        <div class="dash-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div>
+          <div><div class="t" data-i18n="row_inv">Invoice #INV-2048</div><div class="s" data-i18n="row_paid">Paid · VAT included</div></div>
+          <div class="amt">AED 1,240</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TAX / TRUST STRIP ═══════════════════════ -->
+<section class="trust" aria-label="Tax authority certifications">
+  <div class="container trust-inner">
+    <div class="trust-lead reveal" data-i18n-html="trust_lead">Compatible with all tax systems<span class="text-accent">Licensed &amp; certified by government tax authorities</span></div>
+    <div class="trust-logos reveal d1">
+      <figure><img src="https://tax.gov.ae/datafolder//Images/TAX/FTA.jpg" alt="UAE Federal Tax Authority (FTA)" loading="lazy"><figcaption data-i18n="tax_fta">UAE Federal Tax Authority</figcaption></figure>
+      <figure><img src="https://www.phenixsystems.com/images/dareba/1.webp" alt="Egyptian Tax Authority"><figcaption data-i18n="tax_eta">Egyptian Tax Authority</figcaption></figure>
+      <figure><img src="https://www.phenixsystems.com/images/dareba/2.webp" alt="ZATCA — Zakat, Tax and Customs Authority"><figcaption data-i18n="tax_zatca">ZATCA — Saudi Arabia</figcaption></figure>
+      <figure><img src="https://www.phenixsystems.com/images/dareba/3.webp" alt="TSE Germany"><figcaption data-i18n="tax_tse">TSE — Germany</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ VALUE PROPS ═══════════════════════ -->
+<section class="values">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow reveal" data-i18n="val_eyebrow">Why businesses choose Phenix</span>
+      <h2 class="sec-title reveal d1" data-i18n="val_title">Powerful, yet simple to run</h2>
+      <p class="sec-sub reveal d2" data-i18n="val_sub">Everything you need to organize your company — in one connected platform.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value reveal">
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3 data-i18n="v1_t">Easy to use</h3>
+        <p data-i18n="v1_d">Install Phenix and start working straight away — no technical help required.</p>
+      </div>
+      <div class="value reveal d1">
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg></div>
+        <h3 data-i18n="v2_t">Accurate reports</h3>
+        <p data-i18n="v2_d">Get the precise reports your business needs from the best accounting software.</p>
+      </div>
+      <div class="value reveal d2">
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></div>
+        <h3 data-i18n="v3_t">For every activity</h3>
+        <p data-i18n="v3_d">The ideal fit for small, medium and large companies across all sectors.</p>
+      </div>
+      <div class="value reveal d3">
+        <div class="vic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/></svg></div>
+        <h3 data-i18n="v4_t">Anywhere you are</h3>
+        <p data-i18n="v4_d">Monitor your business from any device through powerful mobile apps and the web.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRODUCTS (main services) ═══════════════════════ -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow reveal" data-i18n="prod_eyebrow">Phenix products</span>
+      <h2 class="sec-title reveal d1" data-i18n="prod_title">One platform. Every part of your business.</h2>
+      <p class="sec-sub reveal d2" data-i18n="prod_sub">Run sales, accounts, stock and operations from a single connected system — each module works on its own and works even better together.</p>
+    </div>
+
+    <div class="prod-grid">
+
+      <!-- ① POS (flagship) -->
+      <article class="prod-card feature reveal">
+        <span class="p-tag" data-i18n="tag_popular">Most popular</span>
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M9 16v4M15 16v4M6 8h6M6 11h3"/></svg></div>
+        <h3 data-i18n="pos_t">Point of Sale (POS)</h3>
+        <p class="p-desc" data-i18n="pos_d">A fast, reliable POS system that works on any device — touch, barcode or mobile. Sell online or offline, manage multiple branches and cashiers, and sync every receipt straight into your accounts in real time.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos_f1">Touch &amp; barcode billing</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos_f2">Multi-branch &amp; multi-cashier</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos_f3">Works offline, syncs online</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos_f4">Real-time link to accounting</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos_f5">E-invoicing ready</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pos_f6">Loyalty &amp; promotions</span></li>
+        </ul>
+        <a class="learn" href="pos.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ② Restaurants -->
+      <article class="prod-card reveal d1">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 2v7c0 1.1.9 2 2 2h0a2 2 0 0 0 2-2V2M5 2v9M7 2v9M5 11v11"/><path d="M16 2c-1.7 0-3 2.5-3 5.5S14 13 16 13v9"/></svg></div>
+        <h3 data-i18n="res_t">Restaurants</h3>
+        <p class="p-desc" data-i18n="res_d">Run dine-in, takeaway and delivery from one screen — table management, kitchen display, modifiers and split bills keep service fast and orders accurate.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="res_f1">Table &amp; floor plan</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="res_f2">Kitchen display (KDS)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="res_f3">Delivery &amp; QR menu</span></li>
+        </ul>
+        <a class="learn" href="restaurants.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ③ Manufacturing -->
+      <article class="prod-card reveal d2">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2 20h20M4 20V10l5 4V10l5 4V4l5 16"/></svg></div>
+        <h3 data-i18n="man_t">Manufacturing</h3>
+        <p class="p-desc" data-i18n="man_d">Plan and cost production end to end. Build bills of materials, track raw and finished goods, and see true cost and profit on every production order.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="man_f1">Bill of materials (BOM)</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="man_f2">Production orders &amp; stages</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="man_f3">Cost &amp; profit control</span></li>
+        </ul>
+        <a class="learn" href="manufacturing.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ④ Inventory -->
+      <article class="prod-card reveal">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="m7.5 4.27 9 5.15M21 8.5 12 3 3 8.5v7L12 21l9-5.5v-7z"/><path d="M3.27 6.96 12 12l8.73-5.04M12 21V12"/></svg></div>
+        <h3 data-i18n="inv_t">Inventory</h3>
+        <p class="p-desc" data-i18n="inv_d">Take full control of stock across warehouses — multi-unit items, specifications, barcodes, serial numbers and expiry dates, with handheld stock-count apps.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="inv_f1">Multi-warehouse control</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="inv_f2">Serial &amp; expiry tracking</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="inv_f3">Mobile stock-count</span></li>
+        </ul>
+        <a class="learn" href="inventory.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ⑤ Accounting -->
+      <article class="prod-card reveal d1">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h3M15 18l2-2-2-2"/></svg></div>
+        <h3 data-i18n="acc_t">Accounting</h3>
+        <p class="p-desc" data-i18n="acc_d">A complete, integrated accounting core — chart of accounts, receivables and payables, multi-currency, and precise financial statements in a click.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="acc_f1">General ledger &amp; journals</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="acc_f2">Multi-currency &amp; banks</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="acc_f3">Financial statements</span></li>
+        </ul>
+        <a class="learn" href="accounting.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ⑥ Fixed Assets -->
+      <article class="prod-card reveal d2">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h0M9 13h0M9 17h0M15 9h0M15 13h0M15 17h0"/></svg></div>
+        <h3 data-i18n="fix_t">Fixed Assets</h3>
+        <p class="p-desc" data-i18n="fix_d">Track every asset from purchase to disposal — automatic depreciation, categories, locations and custodians, fully linked to your accounts.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fix_f1">Asset register</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fix_f2">Automatic depreciation</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="fix_f3">Revaluation &amp; disposal</span></li>
+        </ul>
+        <a class="learn" href="fixed-assets.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ⑦ HR Solutions -->
+      <article class="prod-card reveal">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg></div>
+        <h3 data-i18n="hr_t">HR Solutions</h3>
+        <p class="p-desc" data-i18n="hr_d">Manage people and payroll in one place — employee records, attendance, leaves, end-of-service and automated payroll that posts straight to accounting.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hr_f1">Attendance &amp; shifts</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hr_f2">Payroll &amp; end-of-service</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hr_f3">Leaves &amp; vacations</span></li>
+        </ul>
+        <a class="learn" href="hr-solutions.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+      <!-- ⑧ Phenix Cloud -->
+      <article class="prod-card reveal d1">
+        <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M17.5 19a4.5 4.5 0 0 0 .5-9 6 6 0 0 0-11.6-1.6A4 4 0 0 0 6.5 19h11z"/></svg></div>
+        <h3 data-i18n="cloud_t">Phenix Cloud</h3>
+        <p class="p-desc" data-i18n="cloud_d">Keep your data secure and reachable anywhere. Phenix Cloud hosts your system with automatic backups and high availability — work from any branch or device.</p>
+        <ul class="p-feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cloud_f1">Secure cloud hosting</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cloud_f2">Automatic backups</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="cloud_f3">Access from anywhere</span></li>
+        </ul>
+        <a class="learn" href="phenix-cloud.html"><span data-i18n="learn">Learn more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CLIENTS ═══════════════════════ -->
+<section class="clients" aria-label="Our clients">
+  <div class="container">
+    <h3 data-i18n="clients_title">Some of our main customers</h3>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <img src="https://www.phenixsystems.com/images/clients/1.webp" alt="Phenix client">
+      <img src="https://www.phenixsystems.com/images/clients/2.webp" alt="Phenix client">
+      <img src="https://www.phenixsystems.com/images/clients/3.webp" alt="Phenix client">
+      <img src="https://www.phenixsystems.com/images/clients/4.webp" alt="Phenix client">
+      <img src="https://www.phenixsystems.com/images/clients/5.webp" alt="Phenix client">
+      <img src="https://www.phenixsystems.com/images/clients/6.webp" alt="Phenix client">
+      <!-- duplicated for seamless loop -->
+      <img src="https://www.phenixsystems.com/images/clients/1.webp" alt="" aria-hidden="true">
+      <img src="https://www.phenixsystems.com/images/clients/2.webp" alt="" aria-hidden="true">
+      <img src="https://www.phenixsystems.com/images/clients/3.webp" alt="" aria-hidden="true">
+      <img src="https://www.phenixsystems.com/images/clients/4.webp" alt="" aria-hidden="true">
+      <img src="https://www.phenixsystems.com/images/clients/5.webp" alt="" aria-hidden="true">
+      <img src="https://www.phenixsystems.com/images/clients/6.webp" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ STATS / SECTORS ═══════════════════════ -->
+<section class="stats" id="stats" aria-label="Numbers and facts">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow reveal" style="background:rgba(255,255,255,.16);color:#fff" data-i18n="stat_eyebrow">Numbers &amp; facts</span>
+      <h2 class="sec-title reveal d1" data-i18n="stat_title">Clients Statistics</h2>
+    </div>
+    <div class="stats-hero reveal d1">
+      <div class="big"><span class="count" data-target="15000">0</span>+</div>
+      <div class="cap" data-i18n="stat_clients">satisfied clients across the Arab world</div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num"><span class="count" data-target="3000">0</span></div><div class="lbl" data-i18n="st_commercial">Commercial companies</div></div>
+      <div class="stat reveal d1"><div class="num"><span class="count" data-target="2900">0</span></div><div class="lbl" data-i18n="st_retail">Retail &amp; POS</div></div>
+      <div class="stat reveal d2"><div class="num"><span class="count" data-target="1500">0</span></div><div class="lbl" data-i18n="st_restaurants">Restaurants</div></div>
+      <div class="stat reveal"><div class="num"><span class="count" data-target="1000">0</span></div><div class="lbl" data-i18n="st_pharma">Pharmacies &amp; drug stores</div></div>
+      <div class="stat reveal d1"><div class="num"><span class="count" data-target="1000">0</span></div><div class="lbl" data-i18n="st_industrial">Industrial facilities</div></div>
+      <div class="stat reveal d2"><div class="num"><span class="count" data-target="3500">0</span></div><div class="lbl" data-i18n="st_other">Other sectors</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ INTEGRATIONS / CONNECT ═══════════════════════ -->
+<section class="connect" id="connect">
+  <div class="container connect-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="con_eyebrow">Connect everything</span>
+      <h2 data-i18n="con_title">Link your business with the tools you already use</h2>
+      <p data-i18n="con_sub">Phenix connects to leading e-commerce platforms and messaging apps, and extends to the field with powerful mobile apps — so every order and update flows into one place.</p>
+      <div class="chip-row">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Talabat</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Noon</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Deliveroo</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>WhatsApp</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Instagram</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg><span data-i18n="con_ecom">E-commerce</span></span>
+      </div>
+    </div>
+    <div class="apps-card reveal d1">
+      <h3 data-i18n="apps_title">Phenix mobile apps</h3>
+      <p data-i18n="apps_sub">Manage your business on the go.</p>
+      <div class="apps-list">
+        <div class="app-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg><span data-i18n="app1">Sales reps app</span></div>
+        <div class="app-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg><span data-i18n="app2">E-menu</span></div>
+        <div class="app-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span data-i18n="app3">Delivery app</span></div>
+        <div class="app-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span data-i18n="app4">Warehouse manager</span></div>
+        <div class="app-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span data-i18n="app5">Price checker</span></div>
+        <div class="app-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z"/></svg><span data-i18n="app6">Caller ID</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHY PHENIX ═══════════════════════ -->
+<section class="why" id="why">
+  <div class="container why-grid">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="why_eyebrow">About Phenix</span>
+      <h2 class="sec-title" data-i18n="why_title">The complete accounting program your company needs</h2>
+      <p class="sec-sub" data-i18n="why_sub">Phenix Systems delivers the best integrated, powerful accounting software for companies — compatible with every tax system and certified by government tax authorities across the UAE, the Arab world and Germany.</p>
+      <div class="why-points">
+        <div class="why-point">
+          <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div><h4 data-i18n="wp1_t">One integrated system</h4><p data-i18n="wp1_d">Accounts, inventory, POS, manufacturing and HR — all connected in real time.</p></div>
+        </div>
+        <div class="why-point">
+          <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg></div>
+          <div><h4 data-i18n="wp2_t">Tax &amp; e-invoicing ready</h4><p data-i18n="wp2_d">Licensed and certified by FTA, UAE Tax Authority .</p></div>
+        </div>
+        <div class="why-point">
+          <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+          <div><h4 data-i18n="wp3_t">Work from anywhere</h4><p data-i18n="wp3_d">Powerful mobile apps and full web access keep you in control on any device.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal d1">
+      <div class="qmark">&ldquo;</div>
+      <p class="qt" data-i18n="why_quote">Phenix gave us one clear view of sales, stock and accounts across every branch — and made tax filing effortless.</p>
+      <div class="author">
+        <img src="https://www.phenixsystems.com/images/logo-1.webp" alt="Phenix">
+        <div><b data-i18n="why_author">Operations Director</b><span data-i18n="why_author_role">Retail group · 12 branches</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<!-- ═══════════════════════ CONTACT ═══════════════════════ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow reveal" style="background:rgba(255,255,255,.16);color:#fff" data-i18n="ct_eyebrow">Get in touch</span>
+      <h2 class="sec-title reveal d1" data-i18n="ct_title">Request a Quotation</h2>
+      <p class="sec-sub reveal d2" data-i18n="ct_sub">Tell us about your business and we'll show you Phenix in action.</p>
+    </div>
+    <div class="contact-grid">
+      <!-- Form -->
+      <div class="contact-card reveal">
+        <h3 data-i18n="ct_form_t">Send us a message</h3>
+        <p data-i18n="ct_form_s">We'll reply on WhatsApp or by phone.</p>
+        <div class="contact-form" id="contactForm">
+          <div class="field"><label data-i18n="f_name">Full name</label><input id="f_name" type="text" data-i18n-ph="ph_name" placeholder="Your name"></div>
+          <div class="field"><label data-i18n="f_company">Company</label><input id="f_company" type="text" data-i18n-ph="ph_company" placeholder="Company name"></div>
+          <div class="field"><label data-i18n="f_phone">Phone</label><input id="f_phone" type="tel" dir="ltr" data-i18n-ph="ph_phone" placeholder="+971 ..."></div>
+          <div class="field"><label data-i18n="f_msg">How can we help?</label><textarea id="f_msg" data-i18n-ph="ph_msg" placeholder="I'd like a quotation for the POS system..."></textarea></div>
+          <button class="btn btn-primary" id="sendBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            <span data-i18n="f_send">Send via WhatsApp</span>
+          </button>
+        </div>
+      </div>
+      <!-- Info + map -->
+      <div class="contact-card reveal d1">
+        <div class="info-list">
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z"/></svg></div>
+            <div><span class="l" data-i18n="ct_sales">Sales &amp; demo</span><a class="ltr" href="tel:+971509585853">+971 50 958 5853</a></div>
+          </div>
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+            <div><span class="l" data-i18n="ct_support">Technical support</span><a class="ltr" href="tel:+971555440355">+971 55 544 0355</a></div>
+          </div>
+          <div class="info-item">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+            <div><span class="l" data-i18n="ct_email">Email</span><a href="mailto:accountant@phenixsystems.com">accountant@phenixsystems.com</a></div>
+          </div>
+        </div>
+        <!-- MAP: replace the src below with your own Google Maps embed link -->
+        <a class="map-wrap" href="https://share.google/sHHixTA9Y4vx2hPS8" target="_blank" rel="noopener" title="Open Phenix Systems location in Google Maps" aria-label="Open Phenix Systems location in Google Maps">
+          <iframe id="mapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Phenix Systems location" tabindex="-1" style="pointer-events:none"
+            src="https://www.google.com/maps?q=Dubai,United+Arab+Emirates&output=embed"></iframe>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="https://www.phenixsystems.com/images/logo-white.webp" alt="Phenix Systems">
+        <p data-i18n="foot_tag">A powerful, integrated accounting program with every solution your business needs.</p>
+        <div class="foot-social">
+
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_products">Products</h4>
+        <a href="pos.html" data-i18n="pos_t">Point of Sale</a>
+        <a href="accounting.html" data-i18n="acc_t">Accounting</a>
+        <a href="inventory.html" data-i18n="inv_t">Inventory</a>
+        <a href="restaurants.html" data-i18n="res_t">Restaurants</a>
+        <a href="manufacturing.html" data-i18n="man_t">Manufacturing</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_solutions">Solutions</h4>
+        <a href="hr-solutions.html" data-i18n="hr_t">HR Solutions</a>
+        <a href="fixed-assets.html" data-i18n="fix_t">Fixed Assets</a>
+        <a href="phenix-cloud.html" data-i18n="cloud_t">Phenix Cloud</a>
+        <a href="https://www.phenixsystems.com/services/solutions/clinic-management" data-i18n="sol_clinic">Clinic Management</a>
+        <a href="https://www.phenixsystems.com/services/solutions/pharmacy" data-i18n="sol_pharmacy">Pharmacies</a>
+      </div>
+      <div class="foot-col">
+        <h4 data-i18n="foot_company">Company</h4>
+        <a href="https://www.phenixsystems.com/about-us" data-i18n="foot_about">About us</a>
+        <a href="https://www.phenixsystems.com/our-clients" data-i18n="foot_clients">Our clients</a>
+        <a href="https://www.phenixsystems.com/articles" data-i18n="foot_articles">Articles</a>
+        <a href="https://www.phenixsystems.com/downloads" data-i18n="foot_downloads">Downloads</a>
+        <a href="https://www.phenixsystems.com/pages/privacy-policy" data-i18n="foot_privacy">Privacy policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span data-i18n-html="foot_copy">© 2025 Phenix Systems. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════ FLOATING WHATSAPP + BACK TO TOP ═══════════════════════ -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-tip"><span data-i18n="wa_tip">Chat with us on WhatsApp</span><small>+971 50 958 5853</small></span>
+  <span class="wa-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.58-.35M12.04 21.78a9.7 9.7 0 0 1-4.95-1.36l-.36-.21-3.68.97.98-3.59-.23-.37a9.72 9.72 0 0 1-1.49-5.18c0-5.38 4.38-9.76 9.76-9.76a9.7 9.7 0 0 1 6.9 2.86 9.7 9.7 0 0 1 2.86 6.91c0 5.38-4.38 9.76-9.78 9.76"/></svg></span>
+</a>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<script>
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  2) CONFIG — EDIT YOUR CONTACT DETAILS IN ONE PLACE           ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const CONFIG = {
+  whatsapp:     "971509585853",                 /* WhatsApp number, country code, no + or spaces */
+  phoneSales:   "+971509585853",                /* sales / demo line                            */
+  phoneSupport: "+971555440355",                /* technical support line                       */
+  email:        "accountant@phenixsystems.com",
+  facebook:     "https://www.facebook.com/",
+  linkedin:     "#",
+  /* Google Maps embed — paste your own "embed" link between the quotes */
+  mapEmbed:     "https://www.google.com/maps?q=Dubai,United+Arab+Emirates&output=embed",
+  /* Pre-filled WhatsApp greeting (per language) */
+  waText: {
+    en: "Hello Phenix Systems, I'd like to request a quotation for your POS & accounting software.",
+    ar: "مرحباً أنظمة فينيكس، أرغب بطلب عرض سعر لبرنامج نقاط البيع والمحاسبة."
+  }
+};
+
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║  3) ARABIC TEXT — one line per piece of text on the page.    ║
+   ║     (English lives in the HTML above; this is its match.)    ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const I18N = { ar: {
+  skip:"تخطَّ إلى المحتوى", login:"دخول العملاء",
+  nav_products:"المنتجات", nav_why:"لماذا فينيكس", nav_sectors:"القطاعات",
+  nav_integrations:"التكاملات", nav_faq:"الأسئلة الشائعة", nav_contact:"تواصل معنا", nav_demo:"اطلب عرض سعر",
+
+  hero_badge:"موثوق من أكثر من 15,000 منشأة",
+  hero_h1:'أفضل برنامج <span class="grad">نقاط بيع ومحاسبة</span> لإدارة أعمالك',
+  hero_lead:"نظام واحد قوي ومتكامل لنقاط البيع والمحاسبة والمخازن والمطاعم والتصنيع والموارد البشرية — جاهز للضريبة، سحابي، ومصمم لينمو مع أعمالك.",
+  hero_cta1:"احصل على عرض تجريبي مجاني", hero_cta2:"استكشف المنتجات",
+  hero_rating:'<b>4.8/5</b> متوسط التقييم', hero_tax:'جاهز <b>للضريبة والفاتورة الإلكترونية</b>',
+  chip_synced:"مزامنة فورية", chip_sales:"+24% مبيعات",
+  k_today:"اليوم", k_orders:"طلبات", k_stock:"المخزون",
+  row_inv:"فاتورة #INV-2048", row_paid:"مدفوعة · شاملة الضريبة",
+
+  trust_lead:'متوافق مع كافة الأنظمة الضريبية<span class="text-accent">مرخّص ومعتمد من الهيئات الضريبية الحكومية</span>',
+  tax_fta:"الهيئة الاتحادية للضرائب – الإمارات", tax_eta:"هيئة الضرائب المصرية", tax_zatca:"هيئة الزكاة والضريبة والجمارك — السعودية", tax_tse:"TSE — ألمانيا",
+
+  val_eyebrow:"لماذا تختار فينيكس", val_title:"قوي… وسهل الاستخدام",
+  val_sub:"كل ما تحتاجه لتنظيم أعمال شركتك في منصة واحدة متكاملة.",
+  v1_t:"سهل الاستخدام", v1_d:"ثبّت فينيكس وابدأ العمل فوراً — دون الحاجة لأي مساعدة تقنية.",
+  v2_t:"تقارير دقيقة", v2_d:"احصل على أدق التقارير التي تحتاجها شركتك مع أفضل برنامج محاسبة.",
+  v3_t:"لكل النشاطات", v3_d:"الحل الأمثل للشركات الصغيرة والمتوسطة والكبيرة في كل القطاعات.",
+  v4_t:"أينما كنت", v4_d:"راقب أعمالك من أي جهاز عبر تطبيقات محمولة قوية ومن خلال المتصفح.",
+
+  prod_eyebrow:"منتجات فينيكس", prod_title:"منصة واحدة لكل أقسام أعمالك",
+  prod_sub:"أدِر المبيعات والحسابات والمخزون والعمليات من نظام واحد متكامل — كل وحدة تعمل بمفردها وتعمل معاً بشكل أفضل.",
+  tag_popular:"الأكثر طلباً", learn:"اعرف المزيد",
+
+  pos_t:"نقاط البيع (POS)",
+  pos_d:"نظام نقاط بيع سريع وموثوق يعمل على أي جهاز — باللمس أو الباركود أو الموبايل. بِع أونلاين أو دون اتصال، وأدِر فروعك وأمناء الصناديق، وزامن كل فاتورة مع حساباتك لحظياً.",
+  pos_f1:"فوترة باللمس والباركود", pos_f2:"تعدد الفروع والكاشير", pos_f3:"يعمل دون إنترنت ويتزامن أونلاين",
+  pos_f4:"ربط لحظي بالمحاسبة", pos_f5:"جاهز للفاتورة الإلكترونية", pos_f6:"نقاط الولاء والعروض",
+
+  res_t:"المطاعم",
+  res_d:"أدِر الصالة والطلبات الخارجية والتوصيل من شاشة واحدة — إدارة الطاولات وشاشة المطبخ والإضافات وتقسيم الفواتير لخدمة أسرع وطلبات دقيقة.",
+  res_f1:"إدارة الطاولات والصالة", res_f2:"شاشة عرض المطبخ (KDS)", res_f3:"التوصيل وقائمة QR",
+
+  man_t:"التصنيع",
+  man_d:"خطّط لتكاليف الإنتاج من البداية للنهاية. أنشئ قوائم المواد، وتابع المواد الخام والمنتجات النهائية، واطّلع على التكلفة والربح الحقيقي لكل أمر إنتاج.",
+  man_f1:"قائمة المواد (BOM)", man_f2:"أوامر ومراحل الإنتاج", man_f3:"مراقبة التكلفة والربح",
+
+  inv_t:"المخازن",
+  inv_d:"تحكّم كامل بالمخزون عبر المستودعات — تعدد الوحدات والمواصفات والباركود والأرقام التسلسلية وتواريخ الصلاحية، مع تطبيقات جرد على الأجهزة المحمولة.",
+  inv_f1:"إدارة مستودعات متعددة", inv_f2:"تتبّع الأرقام التسلسلية والصلاحية", inv_f3:"جرد عبر الموبايل",
+
+  acc_t:"الحسابات",
+  acc_d:"نواة محاسبية متكاملة — دليل الحسابات، الذمم المدينة والدائنة، تعدد العملات، وقوائم مالية دقيقة بنقرة واحدة.",
+  acc_f1:"الأستاذ العام والقيود", acc_f2:"تعدد العملات والبنوك", acc_f3:"القوائم المالية",
+
+  fix_t:"إدارة الأصول",
+  fix_d:"تابع كل أصل من الشراء حتى الاستبعاد — إهلاك تلقائي، تصنيفات ومواقع وعُهدة، مرتبط بالكامل بحساباتك.",
+  fix_f1:"سجل الأصول", fix_f2:"إهلاك تلقائي", fix_f3:"إعادة التقييم والاستبعاد",
+
+  hr_t:"الموارد البشرية",
+  hr_d:"أدِر الموظفين والرواتب في مكان واحد — ملفات الموظفين والحضور والإجازات ومكافأة نهاية الخدمة ورواتب آلية تُرحَّل مباشرة للمحاسبة.",
+  hr_f1:"الحضور والورديات", hr_f2:"الرواتب ونهاية الخدمة", hr_f3:"الإجازات",
+
+  cloud_t:"فينيكس كلاود",
+  cloud_d:"حافظ على بياناتك آمنة ومتاحة من أي مكان. يستضيف فينيكس كلاود نظامك مع نسخ احتياطي تلقائي وتوافر عالٍ — اعمل من أي فرع أو جهاز.",
+  cloud_f1:"استضافة سحابية آمنة", cloud_f2:"نسخ احتياطي تلقائي", cloud_f3:"وصول من أي مكان",
+
+  clients_title:"بعض عملائنا الرئيسيين",
+  stat_eyebrow:"أرقام وحقائق", stat_title:"إحصائيات العملاء", stat_clients:"عميل راضٍ في الوطن العربي",
+  st_commercial:"شركات تجارية", st_retail:"تجزئة ونقاط بيع", st_restaurants:"مطاعم",
+  st_pharma:"صيدليات ومخازن أدوية", st_industrial:"منشآت صناعية", st_other:"قطاعات أخرى",
+
+  con_eyebrow:"اربط كل شيء", con_title:"اربط أعمالك بالأدوات التي تستخدمها",
+  con_sub:"يتكامل فينيكس مع أبرز منصات التجارة الإلكترونية وتطبيقات المراسلة، ويمتد إلى الميدان عبر تطبيقات محمولة قوية — ليتدفّق كل طلب وتحديث إلى مكان واحد.",
+  con_ecom:"التجارة الإلكترونية",
+  apps_title:"تطبيقات فينيكس للموبايل", apps_sub:"أدِر أعمالك أثناء تنقّلك.",
+  app1:"تطبيق المندوبين", app2:"القائمة الإلكترونية", app3:"تطبيق التوصيل",
+  app4:"مدير المستودع", app5:"فاحص الأسعار", app6:"كاشف رقم المتصل",
+
+  why_eyebrow:"عن فينيكس", why_title:"برنامج المحاسبة المتكامل الذي تحتاجه شركتك",
+  why_sub:"تقدّم أنظمة فينيكس أفضل برنامج محاسبة متكامل وقوي للشركات — متوافق مع كل الأنظمة الضريبية ومعتمد من الهيئات الضريبية الحكومية في الوطن العربي وألمانيا.",
+  wp1_t:"نظام واحد متكامل", wp1_d:"الحسابات والمخازن ونقاط البيع والتصنيع والموارد البشرية — مترابطة لحظياً.",
+  wp2_t:"جاهز للضريبة والفاتورة الإلكترونية", wp2_d:"مرخّص ومعتمد من هيئة الزكاة والضريبة (زاتكا) وهيئة الضرائب المصرية وTSE في ألمانيا.",
+  wp3_t:"اعمل من أي مكان", wp3_d:"تطبيقات محمولة قوية ووصول كامل عبر المتصفح يبقيك متحكماً من أي جهاز.",
+  why_quote:"منحنا فينيكس رؤية واحدة واضحة للمبيعات والمخزون والحسابات في كل الفروع — وجعل الإقرارات الضريبية أمراً سهلاً.",
+  why_author:"مدير العمليات", why_author_role:"مجموعة تجزئة · 12 فرعاً",
+
+  faq_eyebrow:"أسئلة", faq_title:"الأسئلة الشائعة",
+  faq1_q:"هل فينيكس نظام نقاط بيع ومحاسبة متكامل؟",
+  faq1_a:"نعم. يجمع فينيكس بين نقاط البيع والمحاسبة والمخازن والتصنيع والموارد البشرية وإدارة الأصول في نظام واحد متكامل، مع مزامنة فورية لكل شيء.",
+  faq2_q:"هل فينيكس جاهز للضريبة والفاتورة الإلكترونية؟",
+  faq2_a:"بالتأكيد. فينيكس متوافق مع كل الأنظمة الضريبية ومعتمد من الهيئات الضريبية الحكومية بما فيها هيئة الزكاة والضريبة (السعودية) وهيئة الضرائب المصرية وTSE في ألمانيا.",
+  faq3_q:"هل أستطيع استخدام فينيكس على الموبايل وفي السحابة؟",
+  faq3_a:"نعم. يوفّر فينيكس تطبيقات محمولة قوية ووصولاً كاملاً عبر الويب، ويحافظ فينيكس كلاود على بياناتك آمنة ومتاحة من أي فرع أو جهاز.",
+  faq4_q:"هل يناسب الشركات الصغيرة كما الكبيرة؟",
+  faq4_a:"بالطبع. فينيكس هو الحل الأمثل للشركات الصغيرة والمتوسطة والكبيرة في التجزئة والمطاعم والتصنيع والصيدليات والجملة وغيرها.",
+  faq5_q:"هل تقدّمون التركيب والدعم الفني؟",
+  faq5_a:"نعم. يساعدك فريقنا على البدء سريعاً، والدعم الفني المستمر متاح عبر الهاتف وواتساب.",
+
+  ct_eyebrow:"تواصل معنا", ct_title:"اطلب عرض سعر",
+  ct_sub:"أخبرنا عن أعمالك وسنعرض لك فينيكس عملياً.",
+  ct_form_t:"أرسل لنا رسالة", ct_form_s:"سنرد عبر واتساب أو الهاتف.",
+  f_name:"الاسم الكامل", f_company:"الشركة", f_phone:"الهاتف", f_msg:"كيف يمكننا مساعدتك؟", f_send:"أرسل عبر واتساب",
+  ph_name:"اسمك", ph_company:"اسم الشركة", ph_phone:"+971 ...", ph_msg:"أرغب بطلب عرض سعر لنظام نقاط البيع...",
+  ct_sales:"المبيعات والعروض", ct_support:"الدعم الفني", ct_email:"البريد الإلكتروني",
+
+  foot_tag:"برنامج محاسبي متكامل وقوي يضم كل الحلول التي تحتاجها أعمالك.",
+  foot_products:"المنتجات", foot_solutions:"الحلول", foot_company:"الشركة",
+  foot_about:"عن الشركة", foot_clients:"عملاؤنا", foot_articles:"المقالات", foot_downloads:"الملفات", foot_privacy:"سياسة الخصوصية",
+  sol_clinic:"إدارة العيادات", sol_pharmacy:"الصيدليات",
+  foot_copy:"© 2025 أنظمة فينيكس. جميع الحقوق محفوظة.",
+  foot_support:'الدعم الفني: <span class="ltr">+971 55 544 0355</span>',
+  wa_tip:"تواصل معنا عبر واتساب"
+}};
+
+/* Page <title> + meta description per language (for SEO + tab) */
+const META = {
+  en:{ title:"Phenix Systems | Best POS & Accounting Software for Business",
+       desc:"Phenix Systems — the best POS and integrated accounting software for retail, restaurants, manufacturing, inventory, HR and fixed assets. Tax & e-invoicing ready." },
+  ar:{ title:"أنظمة فينيكس | أفضل برنامج نقاط بيع ومحاسبة للشركات",
+       desc:"أنظمة فينيكس — أفضل برنامج نقاط بيع ومحاسبة متكامل للتجزئة والمطاعم والتصنيع والمخازن والموارد البشرية وإدارة الأصول. جاهز للضريبة والفاتورة الإلكترونية." }
+};
+
+/* ───────────────── Language engine ───────────────── */
+let lang = "en";
+const $ = s => document.querySelector(s);
+const langLabel = $("#langLabel");
+
+function buildWa(text){ return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text); }
+
+function applyConfig(){
+  $("#mapFrame").src = CONFIG.mapEmbed;
+  document.querySelectorAll('[aria-label="WhatsApp"]').forEach(a=>a.href="https://wa.me/"+CONFIG.whatsapp);
+}
+
+function applyLang(next){
+  const dict = next === "ar" ? I18N.ar : null;        /* English = the inline HTML, so dict=null restores nothing */
+  const html = document.documentElement;
+  // text nodes
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.getAttribute("data-i18n");
+    if(next==="ar"){ if(dict[k]!==undefined) el.textContent = dict[k]; }
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+    const k = el.getAttribute("data-i18n-html");
+    if(next==="ar" && dict[k]!==undefined) el.innerHTML = dict[k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+    const k = el.getAttribute("data-i18n-ph");
+    if(next==="ar" && dict[k]!==undefined) el.placeholder = dict[k];
+  });
+  if(next==="ar"){
+    html.lang="ar"; html.dir="rtl"; langLabel.textContent="English";
+  }else{
+    html.lang="en"; html.dir="ltr"; langLabel.textContent="العربية";
+    if(window.__EN_SNAPSHOT) restoreEnglish();   /* put English back from snapshot */
+  }
+  document.title = META[next].title;
+  const md = $('meta[name="description"]'); if(md) md.setAttribute("content", META[next].desc);
+  // WhatsApp links (text differs by language)
+  const wa = buildWa(CONFIG.waText[next]);
+  $("#waFloat").href = wa; $("#heroWa").href = wa;
+  lang = next;
+}
+
+/* Snapshot English so we can switch back AR→EN without reload */
+function snapshotEnglish(){
+  const snap = {};
+  document.querySelectorAll("[data-i18n]").forEach(el=>snap[el.getAttribute("data-i18n")+"#t"]=el.textContent);
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>snap[el.getAttribute("data-i18n-html")+"#h"]=el.innerHTML);
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>snap[el.getAttribute("data-i18n-ph")+"#p"]=el.placeholder);
+  window.__EN_SNAPSHOT = snap;
+}
+function restoreEnglish(){
+  const snap = window.__EN_SNAPSHOT;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{const v=snap[el.getAttribute("data-i18n")+"#t"]; if(v!==undefined) el.textContent=v;});
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{const v=snap[el.getAttribute("data-i18n-html")+"#h"]; if(v!==undefined) el.innerHTML=v;});
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{const v=snap[el.getAttribute("data-i18n-ph")+"#p"]; if(v!==undefined) el.placeholder=v;});
+}
+
+function detectLang(){
+  const path = location.pathname.toLowerCase();
+  if(path==="/ar"||path.startsWith("/ar/")||path.endsWith("/ar")) return "ar";
+  const qs = new URLSearchParams(location.search).get("lang");
+  if(qs) return qs.toLowerCase()==="ar" ? "ar" : "en";
+  try{ const saved = localStorage.getItem("phenix_lang"); if(saved) return saved; }catch(e){}
+  return (navigator.language||"en").toLowerCase().startsWith("ar") ? "ar" : "en";
+}
+
+function setLang(next, push){
+  applyLang(next);
+  try{ localStorage.setItem("phenix_lang", next); }catch(e){}
+  if(push){
+    /* manual switch: make sure the whole page is visible immediately */
+    document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+    /* only rewrite the URL on the real (top-level) site, never inside a preview iframe */
+    if(window.self===window.top){ try{ history.replaceState({}, "", next==="ar" ? "/ar" : "/"); }catch(e){} }
+  }
+}
+
+/* ───────────────── Boot ───────────────── */
+document.addEventListener("DOMContentLoaded", ()=>{
+  snapshotEnglish();
+  applyConfig();
+  setLang(detectLang(), false);
+
+  $("#langToggle").addEventListener("click", ()=> setLang(lang==="en"?"ar":"en", true));
+
+  /* Mobile menu */
+  const menu=$("#mobileMenu"), overlay=$("#menuOverlay"), burger=$("#hamburger");
+  const openMenu=()=>{menu.classList.add("open");overlay.classList.add("open");burger.setAttribute("aria-expanded","true");};
+  const closeMenu=()=>{menu.classList.remove("open");overlay.classList.remove("open");burger.setAttribute("aria-expanded","false");};
+  burger.addEventListener("click",openMenu);
+  $("#mmClose").addEventListener("click",closeMenu);
+  overlay.addEventListener("click",closeMenu);
+  menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+
+  /* Nav shrink + back-to-top */
+  const nav=$("#nav"), toTop=$("#toTop");
+  const onScroll=()=>{
+    nav.classList.toggle("shrink", window.scrollY>30);
+    toTop.classList.toggle("show", window.scrollY>500);
+  };
+  window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+  toTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+  /* FAQ accordion */
+  document.querySelectorAll(".faq-q").forEach(q=>{
+    q.addEventListener("click",()=>{
+      const item=q.closest(".faq-item"), ans=item.querySelector(".faq-a"), open=item.classList.contains("open");
+      document.querySelectorAll(".faq-item").forEach(i=>{i.classList.remove("open");i.querySelector(".faq-a").style.maxHeight=null;});
+      if(!open){ item.classList.add("open"); ans.style.maxHeight=ans.scrollHeight+"px"; }
+    });
+  });
+
+  /* Reveal-on-scroll + counters */
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add("in");
+        if(e.target.classList.contains("count")) runCount(e.target);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.18, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll(".reveal,.count").forEach(el=>io.observe(el));
+
+  function runCount(el){
+    const target=+el.getAttribute("data-target"), dur=1600, t0=performance.now();
+    (function tick(now){
+      const p=Math.min((now-t0)/dur,1), val=Math.floor((1-Math.pow(1-p,3))*target);
+      el.textContent=val.toLocaleString("en-US");
+      if(p<1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  /* Contact form → WhatsApp */
+  $("#sendBtn").addEventListener("click",()=>{
+    const v=id=>($("#"+id).value||"").trim();
+    const L = lang==="ar"
+      ? {h:"طلب عرض تجريبي جديد",n:"الاسم",c:"الشركة",p:"الهاتف",m:"الرسالة"}
+      : {h:"New demo request",n:"Name",c:"Company",p:"Phone",m:"Message"};
+    const msg=`${L.h}:\n${L.n}: ${v("f_name")}\n${L.c}: ${v("f_company")}\n${L.p}: ${v("f_phone")}\n${L.m}: ${v("f_msg")}`;
+    window.open(buildWa(msg),"_blank");
+  });
+});
+</script>
+</body>
+</html>
