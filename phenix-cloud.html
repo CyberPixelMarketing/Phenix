@@ -223,6 +223,20 @@ html[dir="rtl"] .more-card .go svg{transform:scaleX(-1)}.more-card .go svg{width
   display:grid;place-items:center;box-shadow:var(--sh-md);opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s}
 .to-top.show{opacity:1;visibility:visible;transform:none}.to-top svg{width:22px;height:22px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+.pp-overlay{position:fixed;inset:0;background:rgba(40,8,10,.6);backdrop-filter:blur(4px);z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:.3s}
+.pp-overlay.open{opacity:1;visibility:visible}
+.pp-modal{background:#fff;color:#1C1A1B;max-width:760px;width:100%;max-height:86vh;border-radius:20px;box-shadow:0 30px 80px rgba(70,10,14,.35);display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px);transition:.3s}
+.pp-overlay.open .pp-modal{transform:none}
+.pp-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;background:linear-gradient(135deg,#6E0F12,#D81F26);color:#fff}
+.pp-head h3{font-size:1.15rem;margin:0}
+.pp-close{color:#fff;font-size:1.9rem;line-height:1;background:none;border:none;cursor:pointer;padding:0 6px}
+.pp-body{padding:22px 24px;overflow-y:auto;line-height:1.7}
+.pp-body h4{margin:18px 0 6px;color:#D81F26;font-size:1.02rem}
+.pp-body h4:first-child{margin-top:0}
+.pp-body p{margin:0 0 10px;color:#444;font-size:.94rem}
+.pp-body ul{margin:0 0 10px;padding-inline-start:20px;list-style:disc}
+.pp-body li{margin:4px 0;color:#444;font-size:.94rem}
 </style>
 </head>
 <body>
@@ -230,8 +244,8 @@ html[dir="rtl"] .more-card .go svg{transform:scaleX(-1)}.more-card .go svg{width
 
 <div class="topbar"><div class="container">
   <div class="tb-left">
-    <a href="tel:+971509585853"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z"/></svg><span class="ltr">+971 50 958 5853</span></a>
-    <a href="mailto:accountant@phenixsystems.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>accountant@phenixsystems.com</a>
+    <a href="tel:+971507891787"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z"/></svg><span class="ltr">+971 50 789 1787</span></a>
+    <a href="mailto:info@phenixsystems.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>info@phenixsystems.com</a>
   </div>
   <div><a href="https://www.phenixsystems.com/login" data-i18n="login">Client Login</a></div>
 </div></div>
@@ -365,7 +379,7 @@ html[dir="rtl"] .more-card .go svg{transform:scaleX(-1)}.more-card .go svg{width
   <p data-i18n="cta_p">Request a quotation and see Phenix working on your activity's data.</p>
   <div class="cta-btns">
     <a class="btn btn-primary jsWa" href="#" target="_blank" rel="noopener" data-i18n="cta_b1">Request a Quotation</a>
-    <a class="btn btn-ghost" href="tel:+971509585853" data-i18n="cta_b2">Talk to Sales</a>
+    <a class="btn btn-ghost" href="tel:+971507891787" data-i18n="cta_b2">Talk to Sales</a>
   </div>
 </div></section>
 
@@ -400,10 +414,6 @@ html[dir="rtl"] .more-card .go svg{transform:scaleX(-1)}.more-card .go svg{width
   <div class="foot-grid">
     <div class="foot-brand">
       <img src="https://www.phenixsystems.com/images/logo-white.webp" alt="Phenix Systems"><p data-i18n="foot_tag">A powerful, integrated accounting program with every solution your business needs.</p>
-      <div class="foot-social">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-        <a href="https://wa.me/971509585853" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.58-.35M12.04 21.78a9.7 9.7 0 0 1-4.95-1.36l-.36-.21-3.68.97.98-3.59-.23-.37a9.72 9.72 0 0 1-1.49-5.18c0-5.38 4.38-9.76 9.76-9.76a9.7 9.7 0 0 1 6.9 2.86 9.7 9.7 0 0 1 2.86 6.91c0 5.38-4.38 9.76-9.78 9.76"/></svg></a>
-      </div>
     </div>
     <div class="foot-col"><h4 data-i18n="foot_products">Products</h4><a href="pos.html" data-i18n="mc_pos_n">Point of Sale</a>
 <a href="restaurants.html" data-i18n="mc_restaurants_n">Restaurants</a>
@@ -415,10 +425,8 @@ html[dir="rtl"] .more-card .go svg{transform:scaleX(-1)}.more-card .go svg{width
 <a href="phenix-cloud.html" data-i18n="mc_cloud_n">Phenix Cloud</a>
 </div>
     <div class="foot-col"><h4 data-i18n="foot_company">Company</h4>
-      <a href="https://www.phenixsystems.com/about-us" data-i18n="foot_about">About us</a>
-      <a href="https://www.phenixsystems.com/our-clients" data-i18n="foot_clients">Our clients</a>
       <a href="index.html#contact" data-i18n="foot_contact">Contact</a>
-      <a href="https://www.phenixsystems.com/pages/privacy-policy" data-i18n="foot_privacy">Privacy policy</a>
+      <a href="#" data-privacy-open data-i18n="foot_privacy">Privacy policy</a>
     </div>
   </div>
   <div class="foot-bottom"><span data-i18n="foot_copy">© 2025 Phenix Systems. All rights reserved.</span></div>
@@ -428,8 +436,8 @@ html[dir="rtl"] .more-card .go svg{transform:scaleX(-1)}.more-card .go svg{width
 <button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
 <script>const CONFIG = {
-  whatsapp:"971509585853", phoneSales:"+971509585853", phoneSupport:"+971555440355",
-  email:"accountant@phenixsystems.com", facebook:"https://www.facebook.com/", linkedin:"#",
+  whatsapp:"971507891787", phoneSales:"+971507891787",
+  email:"info@phenixsystems.com", facebook:"https://www.facebook.com/", linkedin:"#",
   waText:{ en:"Hello Phenix Systems, I'd like to request a quotation.", ar:"مرحباً أنظمة فينيكس، أرغب بطلب عرض سعر." }
 };
 const META={"en": {"title": "Phenix Cloud | Secure Cloud Hosting for Your System", "desc": "Phenix Cloud — keep your system secure and reachable anywhere. Hosted with encryption, automatic backups and high availability, so your team works from any branch or device, safely."}, "ar": {"title": "فينيكس كلاود | استضافة سحابية آمنة لنظامك", "desc": "فينيكس كلاود — حافظ على نظامك آمناً ومتاحاً من أي مكان. مستضاف بتشفير ونسخ احتياطي تلقائي وتوافر عالٍ، ليعمل فريقك من أي فرع أو جهاز بأمان."}};
@@ -487,6 +495,50 @@ document.addEventListener("DOMContentLoaded",()=>{
     document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
   }
 });
+</script>
+
+<div class="pp-overlay" id="ppOverlay" role="dialog" aria-modal="true" aria-labelledby="ppTitle">
+  <div class="pp-modal">
+    <div class="pp-head"><h3 id="ppTitle">Privacy Policy · سياسة الخصوصية</h3><button class="pp-close" id="ppClose" aria-label="Close">&times;</button></div>
+    <div class="pp-body">
+      <h4>Privacy Policy for Phenix Systems</h4>
+      <p>At Phenix Systems, the privacy of our visitors is one of our main priorities. This Privacy Policy explains the types of information we collect and record, and how we use it. If you have questions or need more information, do not hesitate to contact us.</p>
+      <p>This policy applies only to our online activities and to visitors of our website with regard to information they share and/or that is collected here. It does not apply to information collected offline or through other channels.</p>
+      <h4>Consent</h4>
+      <p>By using our website, you consent to this Privacy Policy and agree to its terms.</p>
+      <h4>Information we collect</h4>
+      <p>The personal information you are asked to provide, and the reasons why, will be made clear at the point we ask for it. If you contact us directly, we may receive your name, email address, phone number, the contents of your message and any attachments, and any other information you choose to provide. When you register for an account, we may ask for your name, company name, address, email address, and telephone number.</p>
+      <h4>How we use your information</h4>
+      <ul>
+        <li>Provide, operate, and maintain our website</li>
+        <li>Improve, personalize, and expand our website</li>
+        <li>Understand and analyze how you use our website</li>
+        <li>Develop new products, services, features, and functionality</li>
+        <li>Communicate with you for customer service, updates, and marketing</li>
+        <li>Send you emails</li>
+        <li>Find and prevent fraud</li>
+      </ul>
+      <h4>Log Files</h4>
+      <p>Phenix Systems follows a standard procedure of using log files. These log visitors when they visit websites and may include IP addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and the number of clicks. This information is not linked to any personally identifiable information and is used to analyze trends, administer the site, and gather demographic information.</p>
+      <h4>Cookies and Web Beacons</h4>
+      <p>Like most websites, we use cookies to store information including visitors' preferences and the pages accessed. This helps us optimize your experience by customizing content based on your browser type and other information. You can disable cookies through your browser settings.</p>
+      <h4>Third-Party Privacy Policies</h4>
+      <p>Our Privacy Policy does not apply to other advertisers or websites. We advise you to consult the respective privacy policies of any third-party services for more detailed information.</p>
+      <h4>GDPR Data Protection Rights</h4>
+      <p>You are entitled to: access your data; request rectification; request erasure; restrict processing; object to processing; and request data portability. If you make a request, we have one month to respond. To exercise any of these rights, please contact us.</p>
+      <h4>CCPA Privacy Rights</h4>
+      <p>Under the CCPA, you may request that we disclose the personal data we collect, delete your personal data, or choose not to have it sold. To exercise these rights, please contact us.</p>
+      <h4>Contact</h4>
+      <p>For any questions about this Privacy Policy, contact us at <a href="mailto:info@phenixsystems.com">info@phenixsystems.com</a> or +971 50 789 1787.</p>
+    </div>
+  </div>
+</div>
+<script>
+(function(){var ov=document.getElementById('ppOverlay');if(!ov)return;
+function op(e){if(e)e.preventDefault();ov.classList.add('open');document.body.style.overflow='hidden';}
+function cl(){ov.classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-privacy-open]');if(t){op(e);return;}if(e.target===ov||e.target.closest('#ppClose')){cl();}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')cl();});})();
 </script>
 </body>
 </html>
